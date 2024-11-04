@@ -1,2 +1,2 @@
-test_exercises 2 0.00174118
+test_exercises 3 0.00100531
 ---

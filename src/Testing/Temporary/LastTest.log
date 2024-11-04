@@ -1,10 +1,10 @@
-Start testing: Nov 04 14:48 UTC
+Start testing: Nov 04 14:50 UTC
 ----------------------------------------------------------
 1/1 Testing: test_exercises
 1/1 Test: test_exercises
 Command: "/workspaces/lab4-hamzaSajjad123/src/tests/test_exercises"
 Directory: /workspaces/lab4-hamzaSajjad123/src/tests
-"test_exercises" start time: Nov 04 14:48 UTC
+"test_exercises" start time: Nov 04 14:50 UTC
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -14,8 +14,8 @@ All tests passed (47 assertions in 9 test cases)
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_exercises" end time: Nov 04 14:48 UTC
+"test_exercises" end time: Nov 04 14:50 UTC
 "test_exercises" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 04 14:48 UTC
+End testing: Nov 04 14:50 UTC
