@@ -21,8 +21,14 @@ std::string day_to_name(int day_number)
             "Friday",
             "Saturday",
             "Sunday"};
+    
+    if (day_number <=7 and day_number > 0){
+        return days[day_number - 1];
+    } 
+    else{
+        return invalid;
+    }
 
-    return invalid;
 }
 
 /*
@@ -33,6 +39,10 @@ Use print_swap to check your implementation.
 */
 void swap(int *x, int *y)
 {
+    // we have two pointer :(
+    int temp = *x;
+    *x = *y;
+    *y = temp;
 }
 
 void print_swap()
@@ -51,6 +61,10 @@ Use print_swap_in_place to check your implementation.
 */
 void swap_in_place(int *x, int *y)
 {
+    //hmmm
+    *x = *x + *y; //join two poitner together
+    *y = *x - *y; // = (x+y) - y = x
+    *x = -(*y - *x); // = -(x - (x+y)) = y
 }
 
 void print_swap_in_place()
@@ -70,6 +84,10 @@ Use print_add_vector to check your implementation.
 */
 void add_vector(int *a, int *b, int *result, int size)
 {
+    for(int i = 0; i<=size;i++){
+        result[i] = a[i] + b[i];
+    }
+
 }
 
 void print_add_vector()
@@ -96,6 +114,9 @@ Use print_swap_vector to check your implementation.
 */
 void swap_vector(int **a, int **b)
 {
+    int* temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 void print_swap_vector()
@@ -131,6 +152,24 @@ result_i_j = sum(a_i_k * b_k_j) for k = 0 to k = b_rows - 1
 */
 void matrix_multiplication(int *a, int *b, size_t a_rows, size_t a_cols, size_t b_cols, int *result)
 {
+    
+    /*
+    for(int i=0; i<= a_rows; i++){
+        for(int j =0; j<=b_cols; j++){
+            result[i * b_cols +j] += a[j]*b[j];
+        }
+    }
+    */
+
+   
+   for (size_t i = 0; i < a_rows; ++i) {
+        for (size_t j = 0; j < b_cols; ++j) {  
+            for (size_t k = 0; k < a_cols; ++k) { 
+                result[i * b_cols + j] += a[i * a_cols + k] * b[k * b_cols + j];
+            }
+        }
+    }
+
 }
 
 void print_matrix_multiplication()
